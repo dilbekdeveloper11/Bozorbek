@@ -210,8 +210,9 @@ class IstoriyaZakazTwo extends StatelessWidget {
                                         Text(
                                           "Чиланзар 24. Дом 53/36",
                                           style: TextStyle(
-                                              fontSize: getW(13),
-                                              color: MyColor.ABTColor60,),
+                                            fontSize: getW(13),
+                                            color: MyColor.ABTColor60,
+                                          ),
                                         )
                                       ],
                                     ),
@@ -236,18 +237,34 @@ class IstoriyaZakazTwo extends StatelessWidget {
                               child: Padding(
                                 padding: EdgeInsets.only(
                                     top: getH(10), left: getW(10)),
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      "Детально о покупке",
-                                      style: TextStyle(
-                                        fontSize: getW(13),
-                                        color: MyColor.mainColor,
+                                child: SingleChildScrollView(
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        "Детально о покупке",
+                                        style: TextStyle(
+                                          fontSize: getW(13),
+                                          color: MyColor.mainColor,
+                                        ),
                                       ),
-                                    ),
-                                    SizedBox(height: getH(10)),
-                                  ],
+                                      SizedBox(height: getH(10)),
+                                      Container(
+                                        height: getH(200),
+                                        width: getW(315),
+                                        child: Scrollbar(
+                                          thumbVisibility: true,
+                                          thickness: 5,
+                                          child: ListView.builder(
+                                            itemBuilder: (context, index) {
+                                              return ListTile();
+                                            },itemCount: 20,
+                                          ),
+                                        ),
+                                      )
+                                    ],
+                                  ),
                                 ),
                               ),
                             ),

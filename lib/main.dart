@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:twopage/screens/Zakaz_Pages/istoriya_zakaz_one.dart';
 import 'package:twopage/screens/Zakaz_Pages/istoriya_zakaz_two.dart';
+import 'package:twopage/screens/istoriyaPoisk/istoriya_poisk.dart';
 
 void main() {
   runApp(const MyApp());
